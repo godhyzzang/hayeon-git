@@ -1,0 +1,134 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+* { /* 스타일값 초기화 */
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+body{
+	background-color: #bee8f6;
+}
+
+section{
+	width:340px; /*세로는 안 정해놓음. 밑에 추가되는 컨텐츠 대로 세로 길이 늘어남*/
+	padding:30px;
+	background-color:#fff;
+	margin: 50px auto;
+	box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+	border-radius:10px;
+}
+
+section nav.menu{
+	width:100%;
+}
+section nav.menu::after{
+	content:"";
+	display: block;/*가상요소는 inline 요소이므로 특정 영역
+	을 갖기 위해서는 display:block; 사용해줘야함 */
+	clear:both;
+}
+
+section nav.menu a { /*section의 자식 선택자인 클래스가 menu인 
+	nav의 자식 선택자 a 에 적용하는 스타일*/
+	font-size :20px;
+	color:#666;
+}
+
+section nav.menu a:nth-of-type(1){
+	float:left;
+	
+}
+section nav.menu a:nth-of-type(2){
+	float:right;
+}
+
+section article.profile{
+	width:100%;
+	text-align:center;
+}
+
+section article.profile img{ 
+	width:200px;
+	height:200px;
+	border-radius:50%; /*이미지 동그란 형태로 만듦*/
+	/*margin-top:20px;*//*article을 nav의 자식 요소로 잘못 넣었을때는 꼭 필요한 코드였음*/
+	margin-bottom: 20px; 
+	box-shadow: 5px 15px 30px rgba(173, 216, 230, 0.8);
+}
+
+section article.profile h1{
+	font-weight: bold;
+	font-size:22px;
+	font-family: "arial";
+	line-height:1;
+	color: #555;
+	margin-bottom:5px;
+
+}
+
+section article.profile h2{
+	font-weight: normal;
+	font-size:12px;
+	font-family: "arial";
+	line-height:1;
+	color: #555;
+	margin-bottom:30px;
+
+}
+
+section article.profile a{
+display: block;
+width : 180px;
+height : 32px;
+margin : 0px auto 20px;/*article을 nav의 자식 요소로 잘못 넣었을때는 a요소 left,right로 정렬되어있었기 때문에
+ auto로 자동 가운데정렬이 안 됨.....*/
+border-color:#444;
+border-radius: 16px;
+font-weight:bold;
+font-size:10px;
+font-family: "arial";
+color:#fff;
+line-height: 30px;
+text-align: center;
+background: linear-gradient(45deg, hsl(213, 80%, 81%), #35e0f7);
+box-shadow: 5px 10px 20px rgba(146, 213, 248, 0.493);
+
+
+}
+
+section ul.contact{
+	margin-bottom:25px;
+
+}
+section ul.contact li{
+	width:100%;
+	padding:10px ;
+	border-bottom:none;
+}
+
+section ul.contact li:last-child{
+	border-bottom:none;
+}
+
+section ul.contact li i{
+	width:20%;/*section 너비의 20%인가?*/
+	text-align:center;
+	color:#555;
+	font-size:15px;
+}
+
+section ul.contact li span{
+	font-weight:normal;
+	font-size:11px;
+	font-family:"orbitron";
+	color:#555;
+	letter-spacing: 1px;
+}
